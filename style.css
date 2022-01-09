@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  user-select: none;
 }
 html,
 body {
@@ -10,7 +12,119 @@ body {
 }
 body {
   /* background-color: #050f2c; */
-  background-color: #f0f0f0;
-  color: #fff;
+  font-family: "Red Hat Mono", monospace;
+  background: #f0f0f0;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  max-width: 400px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
+  padding: 20px;
+}
+.box .message {
+  /* background: red; */
+  padding: 30px 10px 50px 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  position: relative;
+  color: #00112c;
+  font-weight: 600;
+  border-left: 15px solid green;
+}
+
+.author {
+  float: right;
+  clear: both;
+  margin-top: 10px;
+  border-bottom: 15px solid green;
+  color: grey;
+  border-radius: 10px;
+}
+.buttons {
+  /* background: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.buttons a {
+  min-width: 40px;
+  min-height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  background: green;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* padding: 10px; */
+}
+.buttons .generate-quote {
+  font-weight: 500;
+  padding: 0 15px 0 15px;
+}
+.buttons .twitter-share {
+  background: #1da1f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Spinner */
+.spinner {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner.remove {
+  display: none;
+}
+.spinner .spin {
+  width: 5px;
+  height: 12px;
+  background: black;
+  margin-right: 2px;
+  border-radius: 1px;
+  animation: spinit 1s infinite linear;
+}
+.spin.spin2 {
+  animation-delay: 0.2s;
+  background: #0abf53;
+}
+.spin.spin3 {
+  animation-delay: 0.4s;
+  background: #d20962;
+}
+.spin.spin4 {
+  animation-delay: 0.6s;
+  background: #037ef3;
+}
+.spin.spin5 {
+  animation-delay: 0.8s;
+  background: #e4002b;
+}
+.spin.spin6 {
+  animation-delay: 0.1s;
+  background: #7552cc;
+}
+@keyframes spinit {
+  0% {
+    height: 12px;
+  }
+  50% {
+    height: 25px;
+  }
+  100% {
+    height: 12px;
+  }
 }
